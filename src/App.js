@@ -1,25 +1,43 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
+import Landing from './Landing';
 import './App.css';
+import { snapshot } from './Data';
+import Flashcards from './Flashcards';
+
 
 class App extends Component {
+  constructor () {
+    super();
+    this.state = {
+      Flashcards: true,
+    };
+    this.keys = Object.keys(this.state);
+  }
+
+  renderNext = (event) => {
+    const section = event.target.classList[0];
+    this.setState({
+      Flashcards: true,
+      [section]: false
+    });
+  }
+
   render() {
     return (
+      
       <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
+        <Landing renderFlashcards={this.renderNext}/>
+        {
+          this.keys.map( key => {
+            if (this.state[key]) {
+              switch (key) {
+              case 'Flashcards':
+                return <Flashcards key={key} />;
+              
+              }
+            }
+          })
+        }
       </div>
     );
   }
