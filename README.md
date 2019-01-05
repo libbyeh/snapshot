@@ -28,6 +28,8 @@ Run npm start in your terminal
 
 ## Wire Frame
 
+Flashcard.png
+
 
 ## Original Assignment
 
