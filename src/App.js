@@ -7,7 +7,8 @@ class App extends Component {
   constructor() {
     super();
     this.state = {
-      snapshot: []
+      snapshot: [],
+      flashCards: ''
     }
   }
 
@@ -20,6 +21,18 @@ class App extends Component {
       })
     })
     .catch(error => console.log('first fetch', error))
+  }
+
+  renderFlashcards = (e) => {
+    let name = e.target.val;
+
+    let chosenFlashcardSet = this.state.snapshot.filter((arr) => {
+      return arr.id === name;
+      console.log(chosenFlashcardSet);
+    })
+    this.setState({
+      flashCards:chosenFlashcardSet
+    })
   }
 
   render() {
@@ -47,29 +60,19 @@ class App extends Component {
             </div>
           </div>
         </section>
-        <section className='flashcard-selections'>Browse Flashcard Languages & Concepts
-          <div className='individual-flashcard-option'>
-            <div className='flashcard-title-box'>Array Prototypes</div>
-            <div classname='flashcard-image-box'>
-              <div className='flashcard-image'></div>
-            </div>
-          </div>
-        </section>
-       {
-        this.state.snapshot.map((array) => {
-          return (
-            <div className='flashcard-body'>
-              <div className='polaroid-image'>
-                <div className='array-cards'>
-                  <h2 className='flashcard-definition'>{array.definition}</h2>
-                  <input></input>
-                  <button className='answer-button'>Check Answer</button>
+        <div className='snapshot-body'>
+            <section className='flashcard-selections'>Browse Flashcard Languages & Concepts
+              <div className='individual-flashcard-option'>
+                <div className='flashcard-title-box'>Array Prototypes
+                  <button className='start-flashcards' onClick={this.renderFlashcards}>Get Started</button>
+                </div>
+                <div classname='flashcard-image-box'>
+                  <div className='flashcard-image'></div>
                 </div>
               </div>
-            </div>
-          )
-        })
-       }
+            </section>
+        </div>
+      <Flashcards chosenFlashcardSet={this.state.flashCards} />
       </div>
     );
   }

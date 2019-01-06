@@ -78,7 +78,7 @@
 
 .flashcard-selections {
   color: #A5832B;
-  margin-top: 250px;
+  margin-top: 150px;
   font-family: "Homemade Apple";
   font-size: 2em;
 } 
@@ -179,7 +179,7 @@
   }
 }*/
 
-.flashcard-body {
+.snapshot-body {
   margin-top: 100px;
 }
 
@@ -196,6 +196,7 @@
 
 .flashcard-definition {
   text-align: center;
+  margin-top: 96px;
   font-size: 1.5em;
   padding: -5px;
   justify-content: center;
