@@ -37,13 +37,12 @@ class App extends Component {
       <div className="App">
         <header className='header'>
           <h1 className='header-title'>[snap-shot]</h1>
+          <h3 className='subhead'> [noun]  An appraisal or summary; also see: Flashcards</h3>
         </header>
         <section className='snapshot-intro'>
-          <div className='flashcard-selections'>Browse Languages & Concepts
+          <div className='flashcard-selections'>Browse Languages & Concepts:
             <div className='individual-flashcard-option'>
-              <div classname='flashcard-image-box'>
-                <div className='flashcard-image'></div>
-              </div>
+              <div className='flashcard-image'></div>
               <div className='flashcard-title-box'>Array Prototypes
                 <button className='start-flashcards' onClick={this.renderFlashcards}>Start Learning</button>
               </div>
