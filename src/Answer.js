@@ -13,15 +13,10 @@ class Answer extends Component {
     if (!savedCard) {
       localStorage.setItem('savedCard', JSON.stringify([this.props.flashcardObject]))
     } else {
-      //add this.props.flashcardObject to savedCard array
-      //save new savedCard array to local storage
       savedCard.push(this.props.flashcardObject)
       localStorage.setItem('savedCard', JSON.stringify(savedCard))
     }
   }
-
-
-
 
   render() {
     if (!this.props.result) {
@@ -32,12 +27,12 @@ class Answer extends Component {
         <div className='answer-body'>
           <div className='answer-polaroid-image-pop'>
             <div className='answer-box'>
-              <h2 className='answer-flashcard-option-title'>Array Prototypes</h2>
+              <h2 className='answer-flashcard-option-title'>Guess a Prototypes</h2>
               <h3 className='correct-answer' >{this.props.result}</h3>
-              <h3 className='answer-flashcard' >{this.props.flashcardObject.answer}</h3>
+              <h3 className='answer-flashcard' >Correct Answer:  {this.props.flashcardObject.answer}</h3>
               <button className='back-flashcard-button' onClick={this.props.nextQuestion}>Next Question</button>
               <a className='flashcard-info-link' href={this.props.flashcardObject.link}>Learn More</a>
-              <button className='save-button' onClick={this.saveFlashcard}>Save Concept</button>
+              <button className='save-button' onClick={this.saveFlashcard}>I Need More Practice - Save Concept</button>
             </div>
           </div>
         </div>

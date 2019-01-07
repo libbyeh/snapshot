@@ -1,10 +1,6 @@
 
 
 .App {
-  text-align: center;
-}
-
-.App {
   background-image: url('./images/white.jpg');
   background-size: cover;
   bottom: 0;
@@ -13,9 +9,10 @@
   position: absolute;
   right: 0;
   top: 0;
+  text-align: center;
 }
 
-/*Header*/
+/*Header Styling*/
 .header {
   background-color: none;
   border-bottom: 5px double #555;
@@ -46,7 +43,7 @@
   font-family: 'Roboto Condensed', sans-serif;
 }
 
-/*Intro-Section*/
+/*Intro-Right Section Styling: Hero Image & Text*/
 .snapshot-intro {
   margin-top: 0px;
   display: flex;
@@ -67,8 +64,8 @@
 
 .box {
   width: 95.8%;
-  background: -moz-linear-gradient(top, rgba(69,72,77,1) 0%, rgba(0,0,0,1) 56%, rgba(0,0,0,1) 95%); 
-  background: -webkit-linear-gradient(top, rgba(69,72,77,1) 0%,rgba(0,0,0,1) 56%,rgba(0,0,0,1) 95%); 
+  background: -moz-linear-gradient(top, rgba(69,72,77,1) 0%, rgba(0,0,0,1) 55%, rgba(0,0,0,1) 95%); 
+  background: -webkit-linear-gradient(top, rgba(69,72,77,1) 0%,rgba(0,0,0,1) 55%,rgba(0,0,0,1) 95%); 
   color: #FFF;
   position: relative;
   margin: -30px 8.5px 0px;
@@ -92,7 +89,7 @@
 }
 
 
-/*Flashcard Set Options*/
+/*Intro-left Section Styling: Flashcard Set Options*/
 .flashcard-selections {
   color: #A5832B;
   height: 50px;
@@ -129,6 +126,10 @@
 
 .start-flashcards {
   margin-bottom: 190px;
+  
+  &:hover {
+    cursor: pointer;
+  }
 }
 
 .flashcard-image {

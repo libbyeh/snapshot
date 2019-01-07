@@ -40,6 +40,31 @@ class Flashcards extends Component {
     })
   }
 
+  // removeFlashcard = (event) => {
+  //   const savedConceptId = parseInt(event.target.id)
+  //   const grabSavedConcepts = JSON.parse(localStorage.getItem('savedCard'));
+  //   for (let i = 0; i < grabSavedConcepts.length; i++) {
+  //     if (parseInt(grabSavedConcepts[i]) === savedConceptId) {
+  //       delete grabSavedConcepts[i]
+  //     }
+  //     console.log('index', grabSavedConcepts[i])
+  //   }
+  //   console.log('grabbed', grabSavedConcepts);
+  //   const updatedSavedConcepts = grabSavedConcepts.filter((id) => {
+  //     return id !== null;
+  //   });
+  //   console.log('updated', updatedSavedConcepts);
+  //   localStorage.setItem('savedCard', JSON.stringify(updatedSavedConcepts));
+  //   // this.props.removeFlashcardFromSet(updatedSavedConcepts)
+  // }
+
+  clearSavedConcepts = () => {
+    localStorage.clear()
+    this.setState({
+      flashCards: ''
+    })
+  }
+
 
   render () {
     if (!this.props.chosenFlashcardSet) {
@@ -51,13 +76,13 @@ class Flashcards extends Component {
         <div className='flashcard-body'>
           <div className='polaroid-image-pop'>
             <div className='array-cards'>
-              <h2 className='flashcard-option-title'>Array Prototypes</h2>
+              <h2 className='flashcard-option-title'>Guess a Prototype</h2>
               <h3 className='flashcard-definition' >{flashcardObject.definition}</h3>
               <input className='answerInput'></input>
               <button className='answer-button' onClick={this.checkAnswer}>Check Answer</button>
-              <button className='next-button' onClick={this.nextQuestion}>Next Question</button>
-              <button className='reset' onClick={event => this.props.resetFlashcards(event)}>Reset</button>
-              { this.props.canRemoveFlashcard ? <button className='remove-flashcard' onClick={this.props.canRemoveFlashcard}>Remove</button> : "" }
+              <button className='next-button' onClick={this.nextQuestion}>Skip Question</button>
+              <button className='reset' onClick={event => this.props.resetFlashcards(event)}>Start Over</button>
+              { this.props.canRemoveFlashcard ? <button className='remove-flashcard' id={flashcardObject.id} onClick={this.clearSavedConcepts}>Clear Saved Concepts</button> : "" }
             </div>
           </div>
         </div>

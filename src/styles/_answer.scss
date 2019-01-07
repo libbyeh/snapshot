@@ -1,6 +1,7 @@
 @import 'variables';
 
 
+// Answer-Body Styling
 .answer-polaroid-image-pop {
   background-image: url('../images/polaroid.jpg');
   background-size: cover;
@@ -32,15 +33,18 @@
 
 .answer-box {  
   width: 95.8%;
+  height: 200px;
   padding-bottom: 48%;
-  background: -moz-linear-gradient(top, rgba(69,72,77,1) 0%, rgba(0,0,0,1) 56%, rgba(0,0,0,1) 95%); 
-  background: -webkit-linear-gradient(top, rgba(69,72,77,1) 0%,rgba(0,0,0,1) 56%,rgba(0,0,0,1) 95%); 
+  background: -moz-linear-gradient(top, rgba(69,72,77,1) 0%, rgba(0,0,0,1) 55%, rgba(0,0,0,1) 95%); 
+  background: -webkit-linear-gradient(top, rgba(69,72,77,1) 0%,rgba(0,0,0,1) 55%,rgba(0,0,0,1) 95%); 
   color: #FFF;
   position: absolute;
   margin: 10px 8.5px 0px;
   z-index: 7;
 }
 
+
+// Answer-Content Styling
 .answer-flashcard-option-title {
   color: #A5832B;
   text-align: center;
@@ -75,6 +79,10 @@
   border: 1px solid white;
   height: auto;
   width: 100px;
+
+  &:hover {
+  cursor: pointer;
+  }
 }
 
 .none {

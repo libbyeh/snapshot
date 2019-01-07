@@ -10,7 +10,8 @@ class App extends Component {
     this.state = {
       snapshot: [],
       flashCards: '',
-      canRemoveFlashcard: false
+      canRemoveFlashcard: false,
+      updatedSavedCards: []
     }
   }
 
@@ -52,6 +53,12 @@ class App extends Component {
     }
   }
 
+  // removeFlashcardFromSet = (flashcards) => {
+  //   this.setState({
+  //     updatedSavedCards: flashcards
+  //   })
+  // }
+
   render() {
     return (
       <div className="App">
@@ -71,7 +78,7 @@ class App extends Component {
               <div className='flashcard-container'>
                 <div className='flashcard-image-2'></div>
                 <div className='flashcard-title-box'>My Saved Concepts
-                  <button className='start-flashcards' onClick={this.renderSavedFlashcards}>Start Learning</button>
+                  <button className='start-flashcards' onClick={this.renderSavedFlashcards}>Start Practicing</button>
                 </div>
               </div>
             </div>
@@ -88,6 +95,7 @@ class App extends Component {
         </section>
       <Flashcards chosenFlashcardSet={this.state.flashCards}
                   canRemoveFlashcard={this.state.canRemoveFlashcard}
+                  removeFlashcardFromSet={this.state.updatedSavedCards}
                   resetFlashcards={this.resetFlashcards} />
       <Answer chosenFlashcardSet={this.state.flashCards} />
       </div>
