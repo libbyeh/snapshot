@@ -8,15 +8,25 @@ class Answer extends Component {
     }
 
   render() {
-
+    if (!this.props.result) {
+      return ( <div className='none'></div> );
+    } else {
     return (
       <div className='answer-popup'>
-        <h1 className='correct-answer' >{this.props.correctAnswer}</h1>
-        <button className='next-button' onClick={this.props.nextQuestion}>Next Question</button>
+        <div className='answer-body'>
+          <div className='answer-polaroid-image-pop'>
+            <div className='answer-box'>
+              <h2 className='answer-flashcard-option-title'>Array Prototypes</h2>
+              <h3 className='correct-answer' >{this.props.result}</h3>
+              <button className='next-button' onClick={this.props.nextQuestion}>Next Question</button>
+              <button className='reset' onClick={this.props.nextFlashcard}>Reset</button>
+            </div>
+          </div>
+        </div>
       </div>
-
     )
-   }
+    }
+  }
   
 
 }

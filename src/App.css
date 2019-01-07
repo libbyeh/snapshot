@@ -50,7 +50,6 @@
 .snapshot-intro {
   margin-top: 0px;
   display: flex;
-  margin-left: -39px;
 }
 
 .polaroid-image-main {
@@ -92,10 +91,6 @@
   font-family: 'Open Sans', sans-serif;
 }
 
-.intro-hero {
-  margin-right:180px;
-}
-
 
 /*Flashcard Set Options*/
 .flashcard-selections {
@@ -104,18 +99,22 @@
   margin-top: 110px;
   font-family: 'Open Sans', sans-serif;
   font-weight: bold;
-  font-size: 2em;
+  font-size: 1.8em;
   margin-left: 180px;
   text-align: right;
-} 
+}
 
-.individual-flashcard-option {
+.flashcard-container {  
   display: flex;
   margin-left: 100px;
 } 
 
+.individual-flashcard-option {
+  display: block;
+} 
+
 .flashcard-title-box {
-  height: 150px;
+  height: 140px;
   width: 230px;
   background-color: #387b89;
   color: white;
@@ -133,11 +132,24 @@
 }
 
 .flashcard-image {
-  background-image: url('./images/prototype.png');
+  background-image: url('./images/proto4.png');
   background-size: cover;
   margin-top: 30px;
-  height: 159.5px;
-  width: 160px;
+  height: 149.5px;
+  width: 150px;
+  position: relative;
+  z-index: 2;
+  border: 5px solid white;
+  background-color: white;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.flashcard-image-2 {
+  background-image: url('./images/star.png');
+  background-size: cover;
+  margin-top: 30px;
+  height: 149.5px;
+  width: 150px;
   position: relative;
   z-index: 2;
   border: 5px solid white;

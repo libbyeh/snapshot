@@ -17,14 +17,12 @@ class Flashcards extends Component {
   checkAnswer = () => {
     const userAnswer = document.querySelector('.answerInput').value
     const correctAnswer = this.props.chosenFlashcardSet[this.state.flashcardIndex].answer 
-    alert(userAnswer + correctAnswer);
     let result = ''
     if (userAnswer === correctAnswer) {
       result = "Correct"
     } else {
       result = 'Incorrect'
     }
-    alert(result)
     this.setState({
       submitAnswer: true,
       answerCorrect: result
@@ -61,7 +59,8 @@ class Flashcards extends Component {
             </div>
           </div>
         </div>
-      <Answer checkAnswer={this.checkAnswer} />
+      <Answer result={this.state.answerCorrect} 
+              nextFlashcard={this.state.flashcardIndex} />
       </div>
     )
    }

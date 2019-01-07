@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
 import Flashcards from './Flashcards';
+import Answer from './Answer';
 
 
 class App extends Component {
@@ -45,16 +46,23 @@ class App extends Component {
       <div className="App">
         <header className='header'>
           <h1 className='header-title'>[snap-shot]</h1>
-          <h3 className='subhead'> [noun]  An appraisal or summary; also see: Flashcards</h3>
+          <h3 className='subhead'> [noun]  An appraisal or summary; Also see: Flashcards</h3>
         </header>
         <section className='snapshot-intro'>
           <div className='flashcard-selections'>Browse Languages & Concepts:
             <div className='individual-flashcard-option'>
-              <div className='flashcard-image'></div>
-              <div className='flashcard-title-box'>Array Prototypes
-                <button className='start-flashcards' onClick={this.renderFlashcards}>Start Learning</button>
+              <div className='flashcard-container'>
+                <div className='flashcard-image'></div>
+                <div className='flashcard-title-box'>Array Prototypes
+                  <button className='start-flashcards' onClick={this.renderFlashcards}>Start Learning</button>
+                </div>
               </div>
-
+              <div className='flashcard-container'>
+                <div className='flashcard-image-2'></div>
+                <div className='flashcard-title-box'>My Saved Concepts
+                  <button className='start-flashcards' onClick={this.renderFlashcards}>Start Learning</button>
+                </div>
+              </div>
             </div>
           </div>
           <div className='intro-hero'>
@@ -69,6 +77,7 @@ class App extends Component {
         </section>
       <Flashcards chosenFlashcardSet={this.state.flashCards} 
                   resetFlashcards={this.resetFlashcards} />
+      <Answer resetFlashcards={this.resetFlashcards} />
       </div>
     );
   }
