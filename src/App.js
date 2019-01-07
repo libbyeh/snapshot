@@ -35,6 +35,7 @@ class App extends Component {
 
   renderSavedFlashcards = () => {
     let savedConcepts = JSON.parse(localStorage.getItem('savedCard'));
+    console.log('hi', savedConcepts)
     this.setState({
       flashCards: savedConcepts
     })

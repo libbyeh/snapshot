@@ -9,8 +9,18 @@ class Answer extends Component {
     }
 
   saveFlashcard = () => {
-    localStorage.setItem('savedCard', JSON.stringify(this.props.chosenFlashcardSet))
+    const savedCard = JSON.parse(localStorage.getItem('savedCard'))
+    if (!savedCard) {
+      localStorage.setItem('savedCard', JSON.stringify([this.props.flashcardObject]))
+    } else {
+      //add this.props.flashcardObject to savedCard array
+      //save new savedCard array to local storage
+      savedCard.push(this.props.flashcardObject)
+      localStorage.setItem('savedCard', JSON.stringify(savedCard))
+    }
   }
+
+
 
 
   render() {
@@ -25,7 +35,7 @@ class Answer extends Component {
               <h2 className='answer-flashcard-option-title'>Array Prototypes</h2>
               <h3 className='correct-answer' >{this.props.result}</h3>
               <h3 className='answer-flashcard' >{this.props.flashcardObject.answer}</h3>
-              <button className='next-button' onClick={this.props.nextQuestion}>Next Question</button>
+              <button className='back-flashcard-button' onClick={this.props.nextQuestion}>Next Question</button>
               <a className='flashcard-info-link' href={this.props.flashcardObject.link}>Learn More</a>
               <button className='save-button' onClick={this.saveFlashcard}>Save Concept</button>
             </div>

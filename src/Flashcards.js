@@ -35,7 +35,8 @@ class Flashcards extends Component {
       nextFlashcard = 0
     } 
     this.setState({
-      flashcardIndex: nextFlashcard
+      flashcardIndex: nextFlashcard,
+      answerCorrect: null
     })
   }
 
@@ -45,6 +46,7 @@ class Flashcards extends Component {
       return ( <div className='none'></div> );
     } else {
       const flashcardObject = this.props.chosenFlashcardSet[this.state.flashcardIndex]
+      console.log(flashcardObject)
     return (
       <div className='flashcard-pop-up'>
         <div className='flashcard-body'>
@@ -61,7 +63,7 @@ class Flashcards extends Component {
         </div>
       <Answer result={this.state.answerCorrect} 
               flashcardObject={this.props.chosenFlashcardSet[this.state.flashcardIndex]}
-              nextFlashcard={this.state.flashcardIndex} />
+              nextQuestion={this.nextQuestion} />
       </div>
     )
    }
