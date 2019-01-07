@@ -60,7 +60,6 @@ class App extends Component {
             </div>
           </div>
         </section>
-        <div className='snapshot-body'></div>
       <Flashcards chosenFlashcardSet={this.state.flashCards} />
       </div>
     );

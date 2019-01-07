@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import './styles/main.scss';
+import Answer from './Answer';
+
 
 
 class Flashcards extends Component {
@@ -23,6 +25,10 @@ class Flashcards extends Component {
       result = 'Incorrect'
     }
     alert(result)
+    this.setState({
+      submitAnswer: true,
+      answerCorrect: result
+    })
   }
 
   nextQuestion = () => {
@@ -41,7 +47,7 @@ class Flashcards extends Component {
     } else {
       const flashcardObject = this.props.chosenFlashcardSet[this.state.flashcardIndex]
     return (
-      <div className='pop-up'>
+      <div className='flashcard-pop-up'>
         <div className='flashcard-body'>
           <div className='polaroid-image-pop'>
             <div className='array-cards'>
@@ -52,6 +58,7 @@ class Flashcards extends Component {
             </div>
           </div>
         </div>
+      <Answer checkAnswer={this.checkAnswer} />
       </div>
     )
    }

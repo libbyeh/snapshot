@@ -17,21 +17,22 @@
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
-.snapshot-body {
-  margin-top: 250px;
-  z-index: 6;
-}
 
-.popup {
+.flashcard-body {
   border-radius: 15px;
   margin-top: 5%;
   overflow: hidden;
-  padding: 20px;
+  // width: 100%;
+  // background-color: white;
   position: fixed;
-  right: calc(50vw - 595px);
-  top: 180px;
-  width: 1200px;
-  z-index: 3;
+  animation: fadeIn 1s;
+  overflow: hidden;
+  position: fixed;
+  right: calc(51.6vw - 450px);
+  top: 103px;
+  padding: 10px;
+  width: 900px;
+  z-index: 15;
 }
 
 .array-cards {  
@@ -58,5 +59,10 @@
   border: 1px solid white;
   height: auto;
   width: 100px;
+}
+
+.none {
+  display:none;
+  position: absolute;
 }
 
