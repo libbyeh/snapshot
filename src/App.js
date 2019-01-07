@@ -9,7 +9,7 @@ class App extends Component {
     super();
     this.state = {
       snapshot: [],
-      flashCards: ''
+      flashCards: '',
     }
   }
 
@@ -30,6 +30,13 @@ class App extends Component {
     })
     this.setState({
       flashCards:chosenFlashcardSet
+    })
+  }
+
+  renderSavedFlashcards = () => {
+    let savedConcepts = JSON.parse(localStorage.getItem('savedCard'));
+    this.setState({
+      flashCards: savedConcepts
     })
   }
 
@@ -60,7 +67,7 @@ class App extends Component {
               <div className='flashcard-container'>
                 <div className='flashcard-image-2'></div>
                 <div className='flashcard-title-box'>My Saved Concepts
-                  <button className='start-flashcards' onClick={this.renderFlashcards}>Start Learning</button>
+                  <button className='start-flashcards' onClick={this.renderSavedFlashcards}>Start Learning</button>
                 </div>
               </div>
             </div>
@@ -77,7 +84,7 @@ class App extends Component {
         </section>
       <Flashcards chosenFlashcardSet={this.state.flashCards} 
                   resetFlashcards={this.resetFlashcards} />
-      <Answer resetFlashcards={this.resetFlashcards} />
+      <Answer chosenFlashcardSet={this.state.flashCards} />
       </div>
     );
   }

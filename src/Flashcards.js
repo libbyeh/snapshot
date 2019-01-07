@@ -19,7 +19,7 @@ class Flashcards extends Component {
     const correctAnswer = this.props.chosenFlashcardSet[this.state.flashcardIndex].answer 
     let result = ''
     if (userAnswer === correctAnswer) {
-      result = "Correct"
+      result = "Correct!"
     } else {
       result = 'Incorrect'
     }
@@ -60,6 +60,7 @@ class Flashcards extends Component {
           </div>
         </div>
       <Answer result={this.state.answerCorrect} 
+              flashcardObject={this.props.chosenFlashcardSet[this.state.flashcardIndex]}
               nextFlashcard={this.state.flashcardIndex} />
       </div>
     )

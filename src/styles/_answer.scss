@@ -32,7 +32,7 @@
 
 .answer-box {  
   width: 95.8%;
-  padding-bottom: 58%;
+  padding-bottom: 48%;
   background: -moz-linear-gradient(top, rgba(69,72,77,1) 0%, rgba(0,0,0,1) 56%, rgba(0,0,0,1) 95%); 
   background: -webkit-linear-gradient(top, rgba(69,72,77,1) 0%,rgba(0,0,0,1) 56%,rgba(0,0,0,1) 95%); 
   color: #FFF;
@@ -55,6 +55,20 @@
   font-size: 1.5em;
   padding: -5px;
   justify-content: center;
+}
+
+.flashcard-info-link {
+  color: blue;
+  position: absolute;
+  font-family: 'Open Sans', sans-serif;
+  right: 155px;
+  top: 320px;
+  z-index: 3;
+
+  &:hover {
+    color: white;
+    cursor: pointer;
+  }
 }
 
 .answer-button {
