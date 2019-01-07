@@ -32,6 +32,14 @@ class App extends Component {
     })
   }
 
+  resetFlashcards = (event) => {
+    if (event.target.classList.contains('reset')) {
+      this.setState({
+        flashCards: ''
+      });
+    }
+  }
+
   render() {
     return (
       <div className="App">
@@ -59,7 +67,8 @@ class App extends Component {
             </div>
           </div>
         </section>
-      <Flashcards chosenFlashcardSet={this.state.flashCards} />
+      <Flashcards chosenFlashcardSet={this.state.flashCards} 
+                  resetFlashcards={this.resetFlashcards} />
       </div>
     );
   }

@@ -41,6 +41,7 @@ class Flashcards extends Component {
     })
   }
 
+
   render () {
     if (!this.props.chosenFlashcardSet) {
       return ( <div className='none'></div> );
@@ -55,7 +56,8 @@ class Flashcards extends Component {
               <h3 className='flashcard-definition' >{flashcardObject.definition}</h3>
               <input className='answerInput'></input>
               <button className='answer-button' onClick={this.checkAnswer}>Check Answer</button>
-                <button className='next-button' onClick={this.nextQuestion}>Next Question</button>
+              <button className='next-button' onClick={this.nextQuestion}>Next Question</button>
+              <button className='reset' onClick={event => this.props.resetFlashcards(event)}>Reset</button>
             </div>
           </div>
         </div>
