@@ -10,6 +10,7 @@ class App extends Component {
     this.state = {
       snapshot: [],
       flashCards: '',
+      canRemoveFlashcard: false
     }
   }
 
@@ -29,22 +30,24 @@ class App extends Component {
       return arr;
     })
     this.setState({
-      flashCards:chosenFlashcardSet
+      flashCards:chosenFlashcardSet,
+      canRemoveFlashcard: false
     })
   }
 
   renderSavedFlashcards = () => {
     let savedConcepts = JSON.parse(localStorage.getItem('savedCard'));
-    console.log('hi', savedConcepts)
     this.setState({
-      flashCards: savedConcepts
+      flashCards: savedConcepts,
+      canRemoveFlashcard: true
     })
   }
 
   resetFlashcards = (event) => {
     if (event.target.classList.contains('reset')) {
       this.setState({
-        flashCards: ''
+        flashCards: '',
+        canRemoveFlashcard: false
       });
     }
   }
@@ -83,7 +86,8 @@ class App extends Component {
             </div>
           </div>
         </section>
-      <Flashcards chosenFlashcardSet={this.state.flashCards} 
+      <Flashcards chosenFlashcardSet={this.state.flashCards}
+                  canRemoveFlashcard={this.state.canRemoveFlashcard}
                   resetFlashcards={this.resetFlashcards} />
       <Answer chosenFlashcardSet={this.state.flashCards} />
       </div>

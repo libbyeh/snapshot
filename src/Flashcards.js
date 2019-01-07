@@ -46,7 +46,6 @@ class Flashcards extends Component {
       return ( <div className='none'></div> );
     } else {
       const flashcardObject = this.props.chosenFlashcardSet[this.state.flashcardIndex]
-      console.log(flashcardObject)
     return (
       <div className='flashcard-pop-up'>
         <div className='flashcard-body'>
@@ -58,6 +57,7 @@ class Flashcards extends Component {
               <button className='answer-button' onClick={this.checkAnswer}>Check Answer</button>
               <button className='next-button' onClick={this.nextQuestion}>Next Question</button>
               <button className='reset' onClick={event => this.props.resetFlashcards(event)}>Reset</button>
+              { this.props.canRemoveFlashcard ? <button className='remove-flashcard' onClick={this.props.canRemoveFlashcard}>Remove</button> : "" }
             </div>
           </div>
         </div>
