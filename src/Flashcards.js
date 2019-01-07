@@ -30,7 +30,6 @@ class Flashcards extends Component {
     if (nextFlashcard === this.props.chosenFlashcardSet.length) {
       nextFlashcard = 0
     } 
-
     this.setState({
       flashcardIndex: nextFlashcard
     })
