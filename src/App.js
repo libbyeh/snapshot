@@ -54,7 +54,6 @@ class App extends Component {
               <div className='box'>
                 <div className='intro-details'>
                   <h2 className='intro-headline'>Flashcards for advanced learning of programming languages and concepts.</h2>
-                  <p className='arrow'>&#x25BC;</p>
                 </div>
               </div>
             </div>

@@ -28,7 +28,6 @@
 
 .header-title {
   margin-top: 18px;
-  margin-right: 60px;
   margin-bottom: 35px;
   font-family: 'Open Sans', sans-serif;
   color: #555;
@@ -93,18 +92,8 @@
   font-family: 'Open Sans', sans-serif;
 }
 
-.arrow {
-  font-size: 37px;
-  color: #A5832B;
-  margin-top: 0px;
-  margin-left: 150px;
-}
-
 .intro-hero {
   margin-right:180px;
-}
-
-.scroll-down {
 }
 
 
