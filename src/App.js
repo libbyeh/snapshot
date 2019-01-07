@@ -40,7 +40,7 @@ class App extends Component {
           <h1 className='header-title'>[snap-shot]</h1>
         </header>
         <section className='snapshot-intro'>
-          <div className='flashcard-selections'>Browse Flashcard Concepts
+          <div className='flashcard-selections'>Browse Concepts
             <div className='individual-flashcard-option'>
               <div className='flashcard-title-box'>Array Prototypes
                 <button className='start-flashcards' onClick={this.renderFlashcards}>Start Learning</button>
@@ -51,7 +51,7 @@ class App extends Component {
             </div>
           </div>
           <div className='intro-hero'>
-            <div className='polaroid-image'>
+            <div className='polaroid-image-main'>
               <div className='box'>
                 <div className="main-headline">snapshot</div>
                 <div className='intro-details'>
