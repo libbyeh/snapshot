@@ -1,10 +1,6 @@
 
 
 .App {
-  text-align: center;
-}
-
-.App {
   background-image: url('./images/white.jpg');
   background-size: cover;
   bottom: 0;
@@ -13,9 +9,10 @@
   position: absolute;
   right: 0;
   top: 0;
+  text-align: center;
 }
 
-/*Header*/
+/*Header Styling*/
 .header {
   background-color: none;
   border-bottom: 5px double #555;
@@ -28,7 +25,6 @@
 
 .header-title {
   margin-top: 18px;
-  margin-right: 60px;
   margin-bottom: 35px;
   font-family: 'Open Sans', sans-serif;
   color: #555;
@@ -47,11 +43,10 @@
   font-family: 'Roboto Condensed', sans-serif;
 }
 
-/*Intro-Section*/
+/*Intro-Right Section Styling: Hero Image & Text*/
 .snapshot-intro {
   margin-top: 0px;
   display: flex;
-  margin-left: -39px;
 }
 
 .polaroid-image-main {
@@ -69,8 +64,8 @@
 
 .box {
   width: 95.8%;
-  background: -moz-linear-gradient(top, rgba(69,72,77,1) 0%, rgba(0,0,0,1) 56%, rgba(0,0,0,1) 95%); 
-  background: -webkit-linear-gradient(top, rgba(69,72,77,1) 0%,rgba(0,0,0,1) 56%,rgba(0,0,0,1) 95%); 
+  background: -moz-linear-gradient(top, rgba(69,72,77,1) 0%, rgba(0,0,0,1) 55%, rgba(0,0,0,1) 95%); 
+  background: -webkit-linear-gradient(top, rgba(69,72,77,1) 0%,rgba(0,0,0,1) 55%,rgba(0,0,0,1) 95%); 
   color: #FFF;
   position: relative;
   margin: -30px 8.5px 0px;
@@ -93,40 +88,30 @@
   font-family: 'Open Sans', sans-serif;
 }
 
-.arrow {
-  font-size: 37px;
-  color: #A5832B;
-  margin-top: 0px;
-  margin-left: 150px;
-}
 
-.intro-hero {
-  margin-right:180px;
-}
-
-.scroll-down {
-}
-
-
-/*Flashcard Set Options*/
+/*Intro-left Section Styling: Flashcard Set Options*/
 .flashcard-selections {
   color: #A5832B;
   height: 50px;
   margin-top: 110px;
   font-family: 'Open Sans', sans-serif;
   font-weight: bold;
-  font-size: 2em;
+  font-size: 1.8em;
   margin-left: 180px;
   text-align: right;
-} 
+}
 
-.individual-flashcard-option {
+.flashcard-container {  
   display: flex;
   margin-left: 100px;
 } 
 
+.individual-flashcard-option {
+  display: block;
+} 
+
 .flashcard-title-box {
-  height: 150px;
+  height: 140px;
   width: 230px;
   background-color: #387b89;
   color: white;
@@ -141,14 +126,31 @@
 
 .start-flashcards {
   margin-bottom: 190px;
+  
+  &:hover {
+    cursor: pointer;
+  }
 }
 
 .flashcard-image {
-  background-image: url('./images/prototype.png');
+  background-image: url('./images/proto4.png');
   background-size: cover;
   margin-top: 30px;
-  height: 159.5px;
-  width: 160px;
+  height: 149.5px;
+  width: 150px;
+  position: relative;
+  z-index: 2;
+  border: 5px solid white;
+  background-color: white;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.flashcard-image-2 {
+  background-image: url('./images/star.png');
+  background-size: cover;
+  margin-top: 30px;
+  height: 149.5px;
+  width: 150px;
   position: relative;
   z-index: 2;
   border: 5px solid white;

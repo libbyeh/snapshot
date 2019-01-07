@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import './styles/main.scss';
+import Answer from './Answer';
+
 
 
 class Flashcards extends Component {
@@ -15,14 +17,16 @@ class Flashcards extends Component {
   checkAnswer = () => {
     const userAnswer = document.querySelector('.answerInput').value
     const correctAnswer = this.props.chosenFlashcardSet[this.state.flashcardIndex].answer 
-    alert(userAnswer + correctAnswer);
     let result = ''
     if (userAnswer === correctAnswer) {
-      result = "Correct"
+      result = "Correct!"
     } else {
       result = 'Incorrect'
     }
-    alert(result)
+    this.setState({
+      submitAnswer: true,
+      answerCorrect: result
+    })
   }
 
   nextQuestion = () => {
@@ -31,9 +35,36 @@ class Flashcards extends Component {
       nextFlashcard = 0
     } 
     this.setState({
-      flashcardIndex: nextFlashcard
+      flashcardIndex: nextFlashcard,
+      answerCorrect: null
     })
   }
+
+  // removeFlashcard = (event) => {
+  //   const savedConceptId = parseInt(event.target.id)
+  //   const grabSavedConcepts = JSON.parse(localStorage.getItem('savedCard'));
+  //   for (let i = 0; i < grabSavedConcepts.length; i++) {
+  //     if (parseInt(grabSavedConcepts[i]) === savedConceptId) {
+  //       delete grabSavedConcepts[i]
+  //     }
+  //     console.log('index', grabSavedConcepts[i])
+  //   }
+  //   console.log('grabbed', grabSavedConcepts);
+  //   const updatedSavedConcepts = grabSavedConcepts.filter((id) => {
+  //     return id !== null;
+  //   });
+  //   console.log('updated', updatedSavedConcepts);
+  //   localStorage.setItem('savedCard', JSON.stringify(updatedSavedConcepts));
+  //   // this.props.removeFlashcardFromSet(updatedSavedConcepts)
+  // }
+
+  clearSavedConcepts = () => {
+    localStorage.clear()
+    this.setState({
+      flashCards: ''
+    })
+  }
+
 
   render () {
     if (!this.props.chosenFlashcardSet) {
@@ -41,17 +72,23 @@ class Flashcards extends Component {
     } else {
       const flashcardObject = this.props.chosenFlashcardSet[this.state.flashcardIndex]
     return (
-      <div className='pop-up'>
+      <div className='flashcard-pop-up'>
         <div className='flashcard-body'>
           <div className='polaroid-image-pop'>
             <div className='array-cards'>
-              <h2 className='flashcard-definition' >{flashcardObject.definition}</h2>
+              <h2 className='flashcard-option-title'>Guess a Prototype</h2>
+              <h3 className='flashcard-definition' >{flashcardObject.definition}</h3>
               <input className='answerInput'></input>
               <button className='answer-button' onClick={this.checkAnswer}>Check Answer</button>
-                <button className='next-button' onClick={this.nextQuestion}>Next Question</button>
+              <button className='next-button' onClick={this.nextQuestion}>Skip Question</button>
+              <button className='reset' onClick={event => this.props.resetFlashcards(event)}>Start Over</button>
+              { this.props.canRemoveFlashcard ? <button className='remove-flashcard' id={flashcardObject.id} onClick={this.clearSavedConcepts}>Clear Saved Concepts</button> : "" }
             </div>
           </div>
         </div>
+      <Answer result={this.state.answerCorrect} 
+              flashcardObject={this.props.chosenFlashcardSet[this.state.flashcardIndex]}
+              nextQuestion={this.nextQuestion} />
       </div>
     )
    }
