@@ -19,12 +19,13 @@ Run npm start in your terminal
 3. Sass
 4. Fetch API
 
-## Pages
-
-
-
 ## Comp
 
+<img width="1436" alt="screen shot 2019-01-08 at 3 32 36 pm" src="https://user-images.githubusercontent.com/33442154/50863164-0d716e00-135b-11e9-95da-8f46468a3e3c.png">
+
+<img width="1430" alt="screen shot 2019-01-08 at 3 32 55 pm" src="https://user-images.githubusercontent.com/33442154/50863178-15c9a900-135b-11e9-8ecc-50e28490e7db.png">
+
+<img width="1426" alt="screen shot 2019-01-08 at 3 33 17 pm" src="https://user-images.githubusercontent.com/33442154/50863188-1bbf8a00-135b-11e9-86de-998d715282da.png">
 
 
 ## Wire Frame
