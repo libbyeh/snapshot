@@ -27,7 +27,7 @@ class App extends Component {
     .catch(error => console.log('first fetch', error))
   }
 
-  renderFlashcards = (e) => {
+  renderFlashcards = () => {
     let chosenFlashcardSet = this.state.snapshot.map((arr) => {
       return arr;
     })
@@ -53,12 +53,6 @@ class App extends Component {
       });
     }
   }
-
-  // removeFlashcardFromSet = (flashcards) => {
-  //   this.setState({
-  //     updatedSavedCards: flashcards
-  //   })
-  // }
 
   render() {
     return (
@@ -96,7 +90,8 @@ class App extends Component {
       <Flashcards chosenFlashcardSet={this.state.flashCards}
                   canRemoveFlashcard={this.state.canRemoveFlashcard}
                   removeFlashcardFromSet={this.state.updatedSavedCards}
-                  resetFlashcards={this.resetFlashcards} />
+                  resetFlashcards={this.resetFlashcards} 
+                  renderSavedFlashcards={this.renderSavedFlashcards} />
       <Answer chosenFlashcardSet={this.state.flashCards} />
       </div>
     );

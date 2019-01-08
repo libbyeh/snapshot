@@ -4,9 +4,6 @@ import Flashcards from './Flashcards';
 import App from './App'
 
 class Answer extends Component {
-  constructor(props) {
-    super();
-    }
 
   saveFlashcard = () => {
     const savedCard = JSON.parse(localStorage.getItem('savedCard'))
@@ -16,6 +13,7 @@ class Answer extends Component {
       savedCard.push(this.props.flashcardObject)
       localStorage.setItem('savedCard', JSON.stringify(savedCard))
     }
+    this.props.renderSavedFlashcards() 
   }
 
   render() {
@@ -31,7 +29,7 @@ class Answer extends Component {
               <h3 className='correct-answer' >{this.props.result}</h3>
               <h3 className='answer-flashcard' >Correct Answer:  {this.props.flashcardObject.answer}</h3>
               <button className='back-flashcard-button' onClick={this.props.nextQuestion}>Next Question</button>
-              <a className='flashcard-info-link' href={this.props.flashcardObject.link}>Learn More</a>
+              <a className='flashcard-info-link' target='_blank' rel='noopener noreferrer' href={this.props.flashcardObject.link}>Learn More</a>
               <button className='save-button' onClick={this.saveFlashcard}>I Need More Practice - Save Concept</button>
             </div>
           </div>
