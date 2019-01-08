@@ -76,7 +76,7 @@ class Flashcards extends Component {
         <div className='flashcard-body'>
           <div className='polaroid-image-pop'>
             <div className='array-cards'>
-              <h2 className='flashcard-option-title'>Guess a Prototype</h2>
+              <h2 className='flashcard-option-title'>Guess a Prototype Method</h2>
               <h3 className='flashcard-definition' >{flashcardObject.definition}</h3>
               <input className='answerInput'></input>
               <button className='answer-button' onClick={this.checkAnswer}>Check Answer</button>

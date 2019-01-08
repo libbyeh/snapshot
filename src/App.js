@@ -4,6 +4,7 @@ import Flashcards from './Flashcards';
 import Answer from './Answer';
 
 
+
 class App extends Component {
   constructor() {
     super();
@@ -63,8 +64,7 @@ class App extends Component {
     return (
       <div className="App">
         <header className='header'>
-          <h1 className='header-title'>[snap-shot]</h1>
-          <h3 className='subhead'> [noun]  An appraisal or summary; Also see: Flashcards</h3>
+          <h1 className='header-title'><span>[snap-</span>shot<span>]</span></h1>
         </header>
         <section className='snapshot-intro'>
           <div className='flashcard-selections'>Browse Languages & Concepts:
