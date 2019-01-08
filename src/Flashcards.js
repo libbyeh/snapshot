@@ -78,11 +78,13 @@ class Flashcards extends Component {
             <div className='array-cards'>
               <h2 className='flashcard-option-title'>Guess a Prototype Method</h2>
               <h3 className='flashcard-definition' >{flashcardObject.definition}</h3>
-              <input className='answerInput'></input>
-              <button className='answer-button' onClick={this.checkAnswer}>Check Answer</button>
-              <button className='next-button' onClick={this.nextQuestion}>Skip Question</button>
-              <button className='reset' onClick={event => this.props.resetFlashcards(event)}>Start Over</button>
-              { this.props.canRemoveFlashcard ? <button className='remove-flashcard' id={flashcardObject.id} onClick={this.clearSavedConcepts}>Clear Saved Concepts</button> : "" }
+              <div classname='button-input-section'>
+                <input className='answerInput'></input>
+                <button className='answer-button' onClick={this.checkAnswer}>Check Answer</button>
+                <button className='next-button' onClick={this.nextQuestion}>Skip Question</button>
+                <button className='reset' onClick={event => this.props.resetFlashcards(event)}>Start Over</button>
+                { this.props.canRemoveFlashcard ? <button className='remove-flashcard' id={flashcardObject.id} onClick={this.clearSavedConcepts}>Clear Saved Concepts</button> : "" }
+              </div>
             </div>
           </div>
         </div>

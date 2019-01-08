@@ -27,7 +27,7 @@ class Answer extends Component {
         <div className='answer-body'>
           <div className='answer-polaroid-image-pop'>
             <div className='answer-box'>
-              <h2 className='answer-flashcard-option-title'>Guess a Prototypes Method</h2>
+              <h2 className='answer-flashcard-option-title'>Guess a Prototype Method</h2>
               <h3 className='correct-answer' >{this.props.result}</h3>
               <h3 className='answer-flashcard' >Correct Answer:  {this.props.flashcardObject.answer}</h3>
               <button className='back-flashcard-button' onClick={this.props.nextQuestion}>Next Question</button>
