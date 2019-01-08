@@ -1,5 +1,4 @@
 
-
 .App {
   background-image: url('./images/white.jpg');
   background-size: cover;
@@ -16,7 +15,7 @@
 .header {
   background-color: none;
   border-bottom: 5px double #555;
-  height: 190px;
+  height: 150px;
   overflow: hidden;
   width: 90%;
   z-index: 3;
@@ -27,20 +26,20 @@
   margin-top: 18px;
   margin-bottom: 35px;
   font-family: 'Open Sans', sans-serif;
-  color: #555;
   text-decoration: none;
   font-size: 100px;
   font-weight: 800;
   letter-spacing: -3px;
   line-height: 1;
-  text-shadow: #EDEDED 3px 2px 0;
+  text-shadow: white 3px 2px 0;
   position: relative;
+  color: #A5832B;
 }
 
-.subhead {
-  height: 50px;
+span {
   color: #555;
-  font-family: 'Roboto Condensed', sans-serif;
+  text-shadow: #EDEDED 3px 2px 0;
+
 }
 
 /*Intro-Right Section Styling: Hero Image & Text*/
@@ -94,6 +93,7 @@
   color: #A5832B;
   height: 50px;
   margin-top: 110px;
+  /*font-family: 'Roboto Condensed', sans-serif;*/
   font-family: 'Open Sans', sans-serif;
   font-weight: bold;
   font-size: 1.8em;
