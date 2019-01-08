@@ -30,7 +30,12 @@ Run npm start in your terminal
 
 ## Wire Frame
 
-Flashcard.png
+<img width="987" alt="screen shot 2019-01-08 at 3 37 28 pm" src="https://user-images.githubusercontent.com/33442154/50863304-7a850380-135b-11e9-9add-481332189bc3.png">
+
+<img width="979" alt="screen shot 2019-01-08 at 3 37 45 pm" src="https://user-images.githubusercontent.com/33442154/50863312-81137b00-135b-11e9-8628-07025e1e1e48.png">
+
+<img width="984" alt="screen shot 2019-01-08 at 3 38 01 pm" src="https://user-images.githubusercontent.com/33442154/50863314-840e6b80-135b-11e9-9fcd-df7a5b542691.png">
+
 
 
 ## Original Assignment
