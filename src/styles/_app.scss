@@ -47,7 +47,7 @@ span {
 .snapshot-intro {
   display: flex;
   margin-top: 20px;
-  margin-left: 217px;
+  margin-left: 0px;
 }
 
 .polaroid-image-main {
@@ -160,3 +160,91 @@ span {
   width: 150px;
   z-index: 2;
 }
+
+  @media (max-width: 975px) {
+
+    .App {
+      overflow: scroll;
+    }
+
+    /*Header Styling*/
+    .header {
+      height: 100px;
+      margin-left: 23px;
+      width: 90%;
+    }
+
+    .header-title {
+      font-size: 50px;
+    }
+
+   .snapshot-intro {
+      display: block;
+      margin: 0px;
+    }
+
+    .intro-hero {
+      position: absolute;
+    }
+
+
+    .polaroid-image-main {
+      height: 320px;
+      margin: 20px 50px 0px;
+      width: 280px;
+      position: absolute;
+    }
+
+    .box {
+      height: 257px;
+      margin: -32px 6.3px 0px;
+      width: 94.8%;
+    }
+
+    .intro-headline {
+      font-size: 1.5em;
+      padding-top: 40px;
+      width: 240px;
+    }
+
+    .flashcard-selections {
+      font-size: 1.7em;
+      height: 50px;
+      margin: 400px 0px 0px 0px;
+      text-align: center;
+      position: absolute;
+    }
+
+    .flashcard-container {  
+      display: flex;
+      margin-left: 40px;
+    }
+
+    .flashcard-title-box {
+      font-size: .8em;
+      margin: 30px 0px 0px 0px;
+      padding: 20px 0px 0px 15px;
+      text-align: left;
+      width: 130px;
+    } 
+
+    .flashcard-image {
+      border: 5px solid white;
+      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+      height: 148px;
+      position: relative;
+      width: 140px;
+    }
+
+    .flashcard-image-2 {
+      height: 148px;
+      position: relative;
+      width: 140px;
+    }
+
+
+
+
+
+
+  }
