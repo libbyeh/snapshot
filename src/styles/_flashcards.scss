@@ -7,7 +7,7 @@
   border-top: 10px solid #d5d5d5;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   height: 508px;
-  margin: 50px 720px 0px;
+  margin: 50px 500px 0px;
   position: relative;
   width: 415px;
   z-index: 2;
@@ -81,7 +81,7 @@
   }
 }
 
-.reset {
+.btn {
   background-color: white;
   border: 4px double $color-mustard;
   color: black;
@@ -125,7 +125,6 @@
   &:hover {
     color: white;
     background-color: $color-mustard;
-
     cursor: pointer;
   }
 }
@@ -135,5 +134,65 @@
   position: absolute;
 }
 
+  @media (max-width: 975px) {
 
+  .polaroid-image-pop {
+    height: 320px;
+    margin: 20px 50px 0px;
+    width: 280px;
+    position: absolute;
+  }
+
+  .flashcard-body {
+    height: 170%;
+    margin-top: 80px;
+    overflow: hidden;
+    position: absolute;
+    top: 30px;
+  }
+
+  .array-cards {  
+    height: 164px;
+    margin: 14px 6.3px 0px;
+    width: 94.8%;
+  }
+
+  .flashcard-option-title {
+    font-size: 1.1em;
+    text-align: center;
+  }
+
+  .flashcard-definition {
+    color: white;
+    font-size: .8em;
+    height: 50px;
+    margin: 20px 0px 0px 25px;
+    width: 80%;
+  }
+
+  .flashcard-number {
+    font-size: .6em;
+    margin-top: 45px;
+  }
+
+  .answer-section {
+    margin-bottom: 10px;
+  }
+
+  .answer-button {
+    font-size: .5em;
+    padding: 5px;
+  }
+
+  .btn {
+    font-size: .5em;
+    padding: 5px;
+  }
+
+
+
+
+
+
+  }
 

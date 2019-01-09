@@ -8,7 +8,7 @@
   border-top: 10px solid #d5d5d5;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   height: 508px;
-  margin: 50px 720px 0px;
+  margin: 50px 500px 0px;
   position: relative;
   width: 415px;
   z-index: 2;
@@ -48,7 +48,7 @@
   text-align: center;
 }
 
-.correct-answer {
+.result-answer {
   color: white;
   font-size: 1.5em;
   height: 100px;
@@ -108,3 +108,63 @@
     cursor: pointer;
   }
 }
+
+  @media (max-width: 975px) {
+  
+
+  .answer-polaroid-image-pop {
+    height: 320px;
+    margin: 20px 50px 0px;
+    width: 280px;
+    position: absolute;
+  }
+    
+  .answer-body {
+    height: 170%;
+    margin-top: 0px;
+    overflow: hidden;
+    position: absolute;
+    top: 0px;
+  }
+
+  .answer-box {  
+    height: 125.5px;
+    margin: 14px 6.3px 0px;
+    width: 94.8%;
+  }
+
+  .answer-flashcard-option-title {
+    font-size: 1.1em;
+    text-align: center;
+  }
+
+  .result-answer {
+    color: white;
+    font-size: 1em;
+    height: 50px;
+    margin: 20px 0px 0px 25px;
+    width: 80%;
+  }
+
+  .correct-answer {
+    font-size: 1em;
+  }
+
+  .flashcard-info-link {
+    right: 90px;
+    top: 220px;
+    font-size: 1em;
+
+  }
+
+  .save-button {
+    font-size: .5em;
+    padding: 5px;
+  }
+
+  .back-flashcard-button {
+    font-size: .5em;
+    padding: 5px;
+    margin-top: 74px;
+  }
+  }
