@@ -63,7 +63,6 @@ describe('App', () => {
 
   it('should have a default state of snapshot & updatedSavedCards set to an empty array, flashcards set to an empty string, and canBeRemoved set to false', () => {
     expect(wrapper.instance().state.canRemoveFlashcard).toEqual(false);
-
     expect(wrapper.state()).toEqual({ ...wrapper.state(), flashCards: '' })
     expect(wrapper.state()).toEqual({ ...wrapper.state(), snapshot: [] })
     expect(wrapper.state()).toEqual({ ...wrapper.state(), updatedSavedCards: [] })
