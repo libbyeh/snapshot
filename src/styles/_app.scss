@@ -16,7 +16,7 @@
 /*Header Styling*/
 .header {
   background-color: none;
-  border-bottom: 5px double #555;
+  border-bottom: 5px double $color-grey;
   height: 150px;
   margin-left: 65px;
   overflow: hidden;
@@ -31,15 +31,14 @@
   font-weight: 800;
   letter-spacing: -3px;
   line-height: 1;
-  margin-bottom: 35px;
-  margin-top: 18px;
+  margin: 18px 0px 35px 0px;
   position: relative;
   text-decoration: none;
   text-shadow: white 3px 2px 0;
 }
 
 span {
-  color: #555;
+  color: $color-grey;
   text-shadow: #EDEDED 3px 2px 0;
 
 }
@@ -47,7 +46,8 @@ span {
 /*Intro-Right Section Styling: Hero Image & Text*/
 .snapshot-intro {
   display: flex;
-  margin-top: 0px;
+  margin-top: 20px;
+  margin-left: 217px;
 }
 
 .polaroid-image-main {
@@ -122,8 +122,15 @@ span {
 
 .start-flashcards {
   margin-bottom: 190px;
+  background-color: white;
+  background: none;
+  border: 4px double $color-mustard;
+  color: white;
+  font-size: .4em;
+  text-transform: uppercase;
   
   &:hover {
+    background-color: $color-mustard;
     cursor: pointer;
   }
 }

@@ -7,7 +7,7 @@
   border-top: 10px solid #d5d5d5;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   height: 508px;
-  margin: 20px 500px 0px;
+  margin: 50px 720px 0px;
   position: relative;
   width: 415px;
   z-index: 2;
@@ -51,14 +51,83 @@
   color: white;
   font-size: 1.5em;
   height: 100px;
-  margin: 20px 0px 100px 40px;
+  margin: 20px 0px 110px 40px;
   width: 80%;
 }
 
+// Button & Input Styling
+.answer-section {
+  margin-bottom: 35px;
+}
+
+.answerInput {
+  font-size: .9em;
+  border: 3px solid $color-mustard;
+}
+
 .answer-button {
-  border: 1px solid white;
-  height: auto;
-  width: 100px;
+  background-color: white;
+  border: 3px solid $color-mustard;
+  color: black;
+  font-size: .7em;
+  text-transform: uppercase;
+  margin: 10px;
+  padding-top: 4px;
+
+  &:hover {
+    color: white;
+    background-color: $color-mustard;
+    cursor: pointer;
+  }
+}
+
+.reset {
+  background-color: white;
+  border: 4px double $color-mustard;
+  color: black;
+  font-size: .6em;
+  text-transform: uppercase;
+  margin: 10px;
+  padding: 10px;
+
+  &:hover {
+    color: white;
+    background-color: $color-mustard;
+    cursor: pointer;
+  }
+}
+
+.next-button {
+  background-color: white;
+  border: 4px double $color-mustard;
+  color: black;
+  font-size: .6em;
+  text-transform: uppercase;
+  padding: 10px;
+  margin: 10px;
+
+  &:hover {
+    color: white;
+    background-color: $color-mustard;
+    cursor: pointer;
+  }
+}
+
+.remove-flashcard {
+  background-color: white;
+  border: 4px double $color-mustard;
+  color: black;
+  font-size: .5em;
+  text-transform: uppercase;
+  padding: 10px;
+  margin: 10px;
+
+  &:hover {
+    color: white;
+    background-color: $color-mustard;
+
+    cursor: pointer;
+  }
 }
 
 .none {
