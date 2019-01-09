@@ -10,7 +10,7 @@ class Flashcards extends Component {
     this.state = {
       answerCorrect: null,
       submitAnswer: false,
-      flashcardIndex: 0
+      flashcardIndex: 0,
     }
   }
 
@@ -36,7 +36,7 @@ class Flashcards extends Component {
     } 
     this.setState({
       flashcardIndex: nextFlashcard,
-      answerCorrect: null
+      answerCorrect: null,
     })
   }
 
@@ -55,7 +55,6 @@ class Flashcards extends Component {
   }
 
 
-
   render () {
     if (!this.props.chosenFlashcardSet) {
       return ( <div className='none'></div> );
@@ -69,7 +68,7 @@ class Flashcards extends Component {
               <h3 className='flashcard-definition' >{flashcardObject.definition}</h3>
               <h4 className='flashcard-number'>Flashcard {flashcardObject.id} of 30</h4>
               <div className='answer-section'>
-                <input className='answerInput'></input>
+                <input className='answerInput' value= {this.state.inputText}></input>
                 <button className='answer-button' onClick={this.checkAnswer}>Check Your Answer</button>
               </div>
               <div className='movement-buttons'>
