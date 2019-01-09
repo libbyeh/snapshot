@@ -16,7 +16,7 @@
 /*Header Styling*/
 .header {
   background-color: none;
-  border-bottom: 5px double #555;
+  border-bottom: 5px double $color-grey;
   height: 150px;
   margin-left: 65px;
   overflow: hidden;
@@ -38,7 +38,7 @@
 }
 
 span {
-  color: #555;
+  color: $color-grey;
   text-shadow: #EDEDED 3px 2px 0;
 
 }
@@ -122,8 +122,15 @@ span {
 
 .start-flashcards {
   margin-bottom: 190px;
+  background-color: white;
+  background: none;
+  border: 3px solid white;
+  color: white;
+  font-size: .4em;
+  text-transform: uppercase;
   
   &:hover {
+    background-color: $color-grey;
     cursor: pointer;
   }
 }
