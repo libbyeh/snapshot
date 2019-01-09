@@ -13,7 +13,6 @@ class Answer extends Component {
       savedCard.push(this.props.flashcardObject)
       localStorage.setItem('savedCard', JSON.stringify(savedCard))
     }
-    this.props.renderSavedFlashcards() 
   }
 
   render() {
