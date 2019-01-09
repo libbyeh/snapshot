@@ -124,13 +124,13 @@ span {
   margin-bottom: 190px;
   background-color: white;
   background: none;
-  border: 3px solid white;
+  border: 2px solid $color-mustard;
   color: white;
   font-size: .4em;
   text-transform: uppercase;
   
   &:hover {
-    background-color: $color-grey;
+    background-color: $color-mustard;
     cursor: pointer;
   }
 }
