@@ -31,8 +31,7 @@
   font-weight: 800;
   letter-spacing: -3px;
   line-height: 1;
-  margin-bottom: 35px;
-  margin-top: 18px;
+  margin: 18px 0px 35px 0px;
   position: relative;
   text-decoration: none;
   text-shadow: white 3px 2px 0;
@@ -47,7 +46,8 @@ span {
 /*Intro-Right Section Styling: Hero Image & Text*/
 .snapshot-intro {
   display: flex;
-  margin-top: 0px;
+  margin-top: 20px;
+  margin-left: 217px;
 }
 
 .polaroid-image-main {
