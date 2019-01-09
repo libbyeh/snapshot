@@ -27,9 +27,6 @@ describe('App', () => {
     wrapper = shallow(
       <App key= 'App'/>
       )
-    // wrapper.setState({
-    //   snapshot: snapshot
-    // })
   })
   
 
@@ -70,7 +67,7 @@ describe('App', () => {
     expect(wrapper.state()).toEqual({ ...wrapper.state(), flashCards: '' })
     expect(wrapper.state()).toEqual({ ...wrapper.state(), snapshot: [] })
     expect(wrapper.state()).toEqual({ ...wrapper.state(), updatedSavedCards: [] })
-  })
+  });
 
 
  

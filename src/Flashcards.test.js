@@ -12,10 +12,20 @@ const snapshot = [
   }
 ]
 
+const exitToMainMock = jest.fn();
+const nextQuestionMock = jest.fn();
+// const chosenFlashcardSetMock = jest.fn();
+
+
 describe ('Flashcards', () => {
-  let wrapper = shallow(
-    <Flashcards  />
+  let wrapper
+  beforeEach(() => {
+    wrapper = shallow(
+    <Flashcards  
+      nextQuestion={nextQuestionMock} 
+       />
     )
+  })
 
   it('should match the snapshot with all data passed in', () => {
     expect(wrapper).toMatchSnapshot();
@@ -30,5 +40,14 @@ describe ('Flashcards', () => {
     expect(wrapper.state()).toEqual({ ...wrapper.state(), answerCorrect: 'Correct!' })
   });
 
+  it('should invoke exitToMain when clicked', () => {
+    wrapper.find('.reset').simulate('click', { preventDefault: () => {} })
+    expect(exitToMainMock.toBeCalled())
+  });
+
+  it('should change to the next question when clicked', () => {
+    wrapper.find('.next-button').simulate('click', { preventDefault: () => {} })
+    expect(setLimitMock.toBeCalled());
+  })
 
 })
