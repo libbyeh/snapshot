@@ -55,6 +55,7 @@
   width: 80%;
 }
 
+// Button & Input Styling
 .answer-section {
   margin-bottom: 35px;
 }
@@ -73,7 +74,6 @@
   margin: 10px;
   padding-top: 4px;
 
-
   &:hover {
     color: white;
     background-color: $color-mustard;
@@ -83,7 +83,7 @@
 
 .reset {
   background-color: white;
-  border: 3px solid $color-mustard;
+  border: 4px double $color-mustard;
   color: black;
   font-size: .6em;
   text-transform: uppercase;
@@ -93,14 +93,13 @@
   &:hover {
     color: white;
     background-color: $color-mustard;
-
     cursor: pointer;
   }
 }
 
 .next-button {
   background-color: white;
-  border: 3px solid $color-mustard;
+  border: 4px double $color-mustard;
   color: black;
   font-size: .6em;
   text-transform: uppercase;
@@ -110,14 +109,13 @@
   &:hover {
     color: white;
     background-color: $color-mustard;
-
     cursor: pointer;
   }
 }
 
 .remove-flashcard {
   background-color: white;
-  border: 3px solid $color-mustard;
+  border: 4px double $color-mustard;
   color: black;
   font-size: .5em;
   text-transform: uppercase;

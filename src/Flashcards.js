@@ -74,8 +74,8 @@ class Flashcards extends Component {
               </div>
               <div className='movement-buttons'>
                 <button className='next-button' onClick={this.nextQuestion}>Skip Question</button>
-                <button className='reset' onClick={event => this.exitToMain(event)}>Start Over</button>
                 { this.props.canRemoveFlashcard ? <button className='remove-flashcard' id={flashcardObject.id} onClick={this.clearSavedConcepts}>Clear Saved Concepts</button> : "" }
+                <button className='reset' onClick={event => this.exitToMain(event)}>Start Over</button>
               </div>
             </div>
           </div>
