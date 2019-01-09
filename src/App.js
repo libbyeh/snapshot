@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import './App.css';
+import './styles/main.scss';
 import Flashcards from './Flashcards';
 import Answer from './Answer';
 
