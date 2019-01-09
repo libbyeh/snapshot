@@ -62,7 +62,6 @@ class Flashcards extends Component {
     } else {
       const flashcardObject = this.props.chosenFlashcardSet[this.state.flashcardIndex]
     return (
-      <div className='flashcard-pop-up'>
         <div className='flashcard-body'>
           <div className='polaroid-image-pop'>
             <div className='array-cards'>
@@ -78,7 +77,6 @@ class Flashcards extends Component {
               </div>
             </div>
           </div>
-        </div>
       <Answer result={this.state.answerCorrect} 
               flashcardObject={this.props.chosenFlashcardSet[this.state.flashcardIndex]}
               nextQuestion={this.nextQuestion} 
