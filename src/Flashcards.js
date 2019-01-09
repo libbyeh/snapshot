@@ -18,7 +18,7 @@ class Flashcards extends Component {
     const userAnswer = document.querySelector('.answerInput').value
     const correctAnswer = this.props.chosenFlashcardSet[this.state.flashcardIndex].answer 
     let result = ''
-    if (userAnswer === correctAnswer) {
+    if (userAnswer.toLowerCase() === correctAnswer.toLowerCase()) {
       result = "Correct!"
     } else {
       result = 'Incorrect'
