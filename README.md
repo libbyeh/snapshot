@@ -1,6 +1,6 @@
 # [snap-shot]
 
-Webster's Dictionary defines snapshot as an appraisel, summary or profile. Flashcards also offer a brief appraisal of a users knowledge of a particular subject. Thus, [snap-shot], a study tool was born! [snap-shot] provides programmers a chance to text their knowledge of array prototype methods while immersed in an elegant and easy-to-navigate UI.  Users can also save individual cards to practice later. Additionally, [snap-shot] is built to scale to add more concepts in the future.  
+Webster's Dictionary defines snapshot as an appraisel, summary or profile. Flashcards also offer a brief appraisal of a users knowledge of a particular subject. Thus, [snap-shot], a study tool was born! [snap-shot] provides programmers a chance to test their knowledge of array prototype methods while immersed in an elegant and easy-to-navigate UI.  Users can also save individual cards to practice later. Additionally, [snap-shot] is built to scale to add more concepts in the future.  
 
 ## Set-up
 
